@@ -10,10 +10,10 @@ import java.awt.Container;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
+import javax.swing.JTextArea;
 public class Slash extends JFrame implements ActionListener{
 
-    JTextField text1 =null;
+    JTextArea text1 =null;
     JLabel label;
 
     public static void main(String[] args){
@@ -22,7 +22,7 @@ public class Slash extends JFrame implements ActionListener{
     }
 
     Slash(String title){
-        setBounds(100, 100, 300, 250);
+        setBounds(200, 200, 1000, 900);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -30,7 +30,8 @@ public class Slash extends JFrame implements ActionListener{
 
         Container con = getContentPane();
 
-        text1 = new JTextField("バクスラ消したい文章", 20);
+        text1 = new JTextArea(50, 200);
+
         JButton button = new JButton("変換");
 
         button.setActionCommand("trans");
